@@ -10,7 +10,11 @@ load_dotenv()
 
 # --- CONFIGURATION ---
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1cm89p7-81Z394q8oDFRk0ZNi3nBgFSbEbcZsUMUaqDs/edit"
-TARGET_SOURCE = "XRP EDWARD BELACSE"
+# Employee-referral name uses this casing. The Foundever Employee ID field
+# on the same form is filled with the uppercase value.
+EMPLOYEE_REFERRAL_NAME = "XRP Edward Belacse"
+EMPLOYEE_ID_VALUE = "XRP EDWARD BELACSE"
+TARGET_SOURCE = EMPLOYEE_REFERRAL_NAME
 
 # --- LOCATION MAPPING ---
 FVR_LINKS = {
@@ -47,10 +51,16 @@ def get_mapped_url(location_str):
     if "cebu robinson" in loc: return FVR_LINKS["cebu robinson"]
     if "mandaluyong edsa" in loc: return FVR_LINKS["mandaluyong edsa"]
     if "mandaluyong shaw" in loc: return FVR_LINKS["mandaluyong shaw"]
-    
-    # General region matching
+
+    # Sheet shorthand for the Quezon / Manila-NCR form.
+    # Keep this after the Mandaluyong Shaw / EDSA checks so those sites stay on their own URL.
+    normalized = " ".join(loc.replace("-", " ").split())
+    if normalized in {"shaw", "north edsa"}:
+        return FVR_LINKS["quezon"]
+
     for key, url in FVR_LINKS.items():
-        if key in loc:
+        key_normalized = " ".join(key.replace("-", " ").split())
+        if normalized == key or normalized == key_normalized:
             return url
     
     return None
@@ -195,7 +205,7 @@ def process_fvr_source_changes():
                     # 5. Check and Correct Source
                     current_source = source_input.input_value()
                     
-                    if current_source.strip().upper() == TARGET_SOURCE:
+                    if current_source.strip() == EMPLOYEE_REFERRAL_NAME:
                         ws.update_cell(row_idx, status_col + 1, "EXECUTIVE TEAM / E")
                         stats["already_correct"] += 1
                     else:
