@@ -52,11 +52,13 @@ def get_mapped_url(location_str):
     if "mandaluyong edsa" in loc: return FVR_LINKS["mandaluyong edsa"]
     if "mandaluyong shaw" in loc: return FVR_LINKS["mandaluyong shaw"]
 
-    # Sheet shorthand for the Quezon / Manila-NCR form.
-    # Keep this after the Mandaluyong Shaw / EDSA checks so those sites stay on their own URL.
+    # Sheet shorthand. Keep this after the Mandaluyong Shaw / EDSA checks
+    # so those sites stay on their own URL.
     normalized = " ".join(loc.replace("-", " ").split())
-    if normalized in {"shaw", "north edsa"}:
+    if normalized in {"shaw", "north edsa", "upa", "upas", "smm"}:
         return FVR_LINKS["quezon"]
+    if normalized == "ane":
+        return FVR_LINKS["makati"]
 
     for key, url in FVR_LINKS.items():
         key_normalized = " ".join(key.replace("-", " ").split())
