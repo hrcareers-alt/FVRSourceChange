@@ -26,7 +26,8 @@ FVR_LINKS = {
     "mandaluyong edsa": "https://jobs.foundever.com/job-invite/406345/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
     "palawan": "https://jobs.foundever.com/job-invite/406352/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
     "makati": "https://jobs.foundever.com/job-invite/406349/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
-    "baguio": "https://jobs.foundever.com/job/Baguio-Baguio-Customer-Service-Associate-Phil/1345433200/?utm_source=customcampaign&utm_campaign=NERP%20EBELACSE",
+    # Job 1345433200 is closed ("position has been filled"). The open posting is 1435289400.
+    "baguio": "https://jobs.foundever.com/job/Baguio-Baguio-Customer-Service-Associate-Phil/1435289400/?utm_source=customcampaign&utm_campaign=NERP%20EBELACSE",
     "alabang": "https://jobs.foundever.com/job-invite/406346/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
     "quezon": "https://jobs.foundever.com/job/Manila-NCR-Customer-Service-Associate-Phil/1345432200/?utm_campaign=XRPBelacse&utm_source=OutsourcedStaff",
     "manila-ncr": "https://jobs.foundever.com/job/Manila-NCR-Customer-Service-Associate-Phil/1345432200/?utm_campaign=XRPBelacse&utm_source=OutsourcedStaff"
