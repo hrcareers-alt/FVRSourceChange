@@ -20,7 +20,8 @@ TARGET_SOURCE = EMPLOYEE_REFERRAL_NAME
 FVR_LINKS = {
     "cebu": "https://jobs.foundever.com/job/Cebu-Cebu-Customer-Service-Associate-Phil/1345433100/?utm_campaign=XRPBelacse&utm_source=OutsourcedStaff",
     "cebu robinson": "https://jobs.foundever.com/job-invite/406350/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
-    "tarlac": "https://jobs.foundever.com/job/Tarlac-Tarlac-Customer-Service-Associate-Phil/1345432700/?utm_source=SourcingOther&utm_campaign=EBELACSE",
+    # Job 1345432700 is closed. The open posting is 1439053000.
+    "tarlac": "https://jobs.foundever.com/job/Tarlac-Tarlac-Customer-Service-Associate-Phil/1439053000/?utm_source=SourcingOther&utm_campaign=EBELACSE",
     "pasig": "https://jobs.foundever.com/job-invite/406345/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
     "mandaluyong shaw": "https://jobs.foundever.com/job-invite/406345/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
     "mandaluyong edsa": "https://jobs.foundever.com/job-invite/406345/?utm_source=OutsourcedStaff&utm_campaign=XRPBelacse",
